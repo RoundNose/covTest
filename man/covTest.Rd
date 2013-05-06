@@ -8,6 +8,7 @@ This function  computes covariance test for inference in  adaptive linear modell
 regression) in the Gaussian case, binomial/logistic and Cox proportional hazards survival models.
 This package should be considered EXPERIMENTAL. The background paper is not yet published
 and rigorous theory does not yet exist for the logistic and Cox models.
+We have currently disabled the Cox option, as it it not yet reliable.
 
 }
 \usage{
@@ -87,10 +88,10 @@ covTest(a,x,y)
 
 
 # Cox model
-y=6*x[,2]+rnorm(100)+10
-status=sample(c(0,1),size=length(y),replace=TRUE)
-a=lars.glm(x,y,status=status,family="cox")
-covTest(a,x,y,status=status)
+#y=6*x[,2]+rnorm(100)+10
+#status=sample(c(0,1),size=length(y),replace=TRUE)
+#a=lars.glm(x,y,status=status,family="cox")
+#covTest(a,x,y,status=status)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

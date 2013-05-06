@@ -10,7 +10,8 @@ s8=substring(fitobj$call,1,8)[1]
 if(s4=="lars"& s7!="lars.en"  &s8!="lars.glm") {calltype="lars";family="gaussian"}
 if(s7=="lars.en") {calltype="lars.en";family="gaussian"}
 if(s8=="lars.glm") {calltype="lars.glm";family=fitobj$family}
-
+if(family=="cox")
+    stop("Cox model not yet implemented")
 if(calltype=="lars"){
        if(fitobj$type!="LASSO"){stop("Call to Lars must use type='LASSO'")}
            }

@@ -64,9 +64,9 @@ covTest(a,x,y)
 
 
 # Cox model
-y=6*x[,2]+rnorm(100)+10
-status=sample(c(0,1),size=length(y),replace=TRUE)
-a=lars.glm(x,y,status=status,family="cox")
-covTest(a,x,y,status=status)
+#y=6*x[,2]+rnorm(100)+10
+#status=sample(c(0,1),size=length(y),replace=TRUE)
+#a=lars.glm(x,y,status=status,family="cox")
+#covTest(a,x,y,status=status)
 }
 
