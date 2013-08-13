@@ -89,10 +89,13 @@ if(type=="lars.en"){
       }
 if(type=="lars.glm"){
     if(family=="binomial")  {
+ # this next line because glmnet now bombs if x has one col
+         if(length(tt0)==1){tt0=c(tt0,tt0)}
          glmobj0=glmnet(x[,tt0,drop=F],y,family="binomial",standardize=fitobj$standardize,lambda.min.ratio=lambda.min.ratio)
         yhat0=as.vector(predict(glmobj0,x[,tt0,drop=F],type="link",s=lambda/n))
          }
     if(family=="cox"){  
+  if(length(tt0)==1){tt0=c(tt0,tt0)}
       glmobj0=glmnet(x[,tt0,drop=F],Surv(y,status),family="cox",standardize=fitobj$standardize,lambda.min.ratio=lambda.min.ratio)
         yhat0=as.vector(predict(glmobj0,x[,tt0,drop=F],type="link",s=lambda/n))
        }

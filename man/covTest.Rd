@@ -8,7 +8,7 @@ This function  computes covariance test for inference in  adaptive linear modell
 regression) in the Gaussian case, binomial/logistic and Cox proportional hazards survival models.
 This package should be considered EXPERIMENTAL. The background paper is not yet published
 and rigorous theory does not yet exist for the logistic and Cox models.
-We have currently disabled the Cox option, as it it not yet reliable.
+We have currently disabled the Cox option, as it is not yet reliable.
 
 }
 \usage{
@@ -63,8 +63,6 @@ lars, lars.en, lars.glm
 }
 \examples{
 
-library(lars,lib.loc="/home/tibs/RLIB/lars.lib")
-library(glmpath,lib.loc="/home/tibs/RLIB/glmpath.lib")
 
 set.seed(1234)
 x=matrix(rnorm(100*10),ncol=10)

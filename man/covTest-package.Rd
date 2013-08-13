@@ -40,8 +40,6 @@ A significance test for the lasso (2013). Lockhart, R.,  Taylor, J.,  Tibshirani
 \seealso{covTest, lars.glm, lars.en
 }
 \examples{
-library(lars,lib.loc="/home/tibs/RLIB/lars.lib")
-library(glmpath,lib.loc="/home/tibs/RLIB/glmpath.lib")
 
 x=matrix(rnorm(100*10),ncol=10)
 x=scale(x,TRUE,TRUE)/sqrt(99)
